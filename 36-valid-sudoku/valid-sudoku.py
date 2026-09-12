@@ -14,12 +14,11 @@ class Solution:
                 num = board[r][c]
                 box = (r//3) * 3 + (c//3)
 
+
                 if num in rows[r]:
                     return False
-
                 if num in cols[c]:
                     return False
-
                 if num in boxes[box]:
                     return False
 
