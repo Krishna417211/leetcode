@@ -12,7 +12,7 @@ class Solution:
         def order(root):
             if not root:
                 return []
-            
+
             order(root.left)
             val.append(root.val)
             order(root.right)
