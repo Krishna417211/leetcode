@@ -9,7 +9,7 @@ class Solution:
     def kthSmallest(self, root, k):
         
 
-        val = []
+        val =  []
 
         def order(root):
             if not root:
