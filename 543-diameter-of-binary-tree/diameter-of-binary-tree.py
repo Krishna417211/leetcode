@@ -15,16 +15,14 @@ class Solution:
             if not root:
                 return 0
 
-
             left = height(root.left)
             right = height(root.right)
 
-
             diameter = max(diameter, left + right)
-
 
             return 1 + max(left, right)
 
         height(root)
 
         return diameter
+
