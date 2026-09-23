@@ -5,10 +5,10 @@ class Solution:
 
 
         for i in range(len(temperatures)):
-
+            
             while stack and temperatures[i] > temperatures[stack[-1]]:
-                prev_index = stack.pop()
-                result[prev_index] = i - prev_index
+                prev_id = stack.pop()
+                result[prev_id] = i - prev_id
 
             stack.append(i)
 
