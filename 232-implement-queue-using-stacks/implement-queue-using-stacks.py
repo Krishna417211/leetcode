@@ -26,7 +26,6 @@ class MyQueue:
         
 
     def empty(self) -> bool:
-
         return not self.input and not self.output
         
 
