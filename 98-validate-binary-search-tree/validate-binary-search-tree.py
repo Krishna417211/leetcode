@@ -5,9 +5,11 @@
 #         self.left = left
 #         self.right = right
 class Solution:
-    def isValidBST(self, root: Optional[TreeNode]) -> bool:
+    def isValidBST(self, root: TreeNode | None) -> bool:
+
 
         val = []
+
 
         def order(root):
             if not root:
@@ -21,8 +23,10 @@ class Solution:
 
         order(root)
 
-        for i in range(1,len(val)):
+        for i in range(1, len(val)):
             if val[i-1] >= val[i]:
                 return False
 
         return True
+
+        
