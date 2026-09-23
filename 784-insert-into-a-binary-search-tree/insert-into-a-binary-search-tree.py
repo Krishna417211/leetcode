@@ -5,7 +5,7 @@
 #         self.left = left
 #         self.right = right
 class Solution:
-    def insertIntoBST(self, root: Optional[TreeNode], val: int) -> Optional[TreeNode]:
+    def insertIntoBST(self, root: TreeNode | None, val: int) -> TreeNode | None:
 
         if not root:
             return TreeNode(val)
@@ -17,3 +17,4 @@ class Solution:
             root.left = self.insertIntoBST(root.left, val)
 
         return root
+        
