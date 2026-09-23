@@ -4,14 +4,13 @@
 #         self.val = val
 #         self.left = left
 #         self.right = right
-
 class Solution:
-    def kthSmallest(self, root, k):
-        
+    def kthSmallest(self, root: TreeNode | None, k: int) -> int:
 
-        val =  []
+        val = []
 
         def order(root):
+
             if not root:
                 return []
 
@@ -23,3 +22,4 @@ class Solution:
 
         order(root)
         return val[k-1]
+        
