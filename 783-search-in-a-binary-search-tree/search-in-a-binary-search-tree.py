@@ -19,3 +19,5 @@ class Solution:
 
         else:
             return self.searchBST(root.left, val)
+
+    
