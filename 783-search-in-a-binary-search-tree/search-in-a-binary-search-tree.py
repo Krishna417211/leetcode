@@ -5,19 +5,19 @@
 #         self.left = left
 #         self.right = right
 class Solution:
-    def searchBST(self, root: Optional[TreeNode], val: int) -> Optional[TreeNode]:
-        # Now we are going to seach in a binary search tree
+    def searchBST(self, root: TreeNode | None, val: int) -> TreeNode | None:
 
         if not root:
             return None
 
         if root.val == val:
             return root
-
         elif root.val < val:
             return self.searchBST(root.right,val)
 
         else:
-            return self.searchBST(root.left, val)
+            return self.searchBST(root.left,val)
 
-    
+
+
+        
