@@ -6,11 +6,9 @@
 #         self.right = right
 class Solution:
     def kthSmallest(self, root: TreeNode | None, k: int) -> int:
-
         val = []
 
         def order(root):
-
             if not root:
                 return []
 
@@ -22,4 +20,3 @@ class Solution:
 
         order(root)
         return val[k-1]
-        
