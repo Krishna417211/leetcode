@@ -1,0 +1,31 @@
+class Solution:
+    def reorderList(self, head: Optional[ListNode]) -> None:
+        if not head or not head.next:
+            return None
+
+        slow = fast = head
+
+        while fast and fast.next:
+            slow = slow.next
+            fast = fast.next.next
+
+        temp = slow.next
+        slow.next = None
+
+        prev = None
+        while temp:
+            temp.next, prev, temp = prev, temp, temp.next
+
+        first = head
+        second = prev
+        
+        while second:
+            temp1 = first.next
+            temp2 = second.next
+
+            first.next = second
+            second.next = temp1
+
+            first = temp1
+            second  = temp2
+
