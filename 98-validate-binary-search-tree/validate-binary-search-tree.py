@@ -13,7 +13,7 @@ class Solution:
 
         def order(root):
             if not root:
-                return []
+                return None
 
             order(root.left)
             val.append(root.val)
@@ -24,9 +24,6 @@ class Solution:
         order(root)
 
         for i in range(1, len(val)):
-            if val[i-1] >= val[i]:
+            if val[i -1 ] >=  val[i]:
                 return False
-
         return True
-
-        
