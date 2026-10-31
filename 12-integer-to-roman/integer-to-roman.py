@@ -14,8 +14,11 @@ class Solution:
         ]
 
         for i in range(len(values)):
-            while num >=  values[i]:
+            while num >= values[i]:
                 res += symbols[i]
                 num -= values[i]
 
         return res
+
+
+        
